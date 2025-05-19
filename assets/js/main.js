@@ -55,3 +55,59 @@ sr.reveal('.home__data, .about__img, .skills__subtitle, .skills__text',{});
 sr.reveal('.home__img, .about__subtitle, .about__text, .skills__img',{delay: 400}); 
 sr.reveal('.home__social-icon',{ interval: 200}); 
 sr.reveal('.skills__data, .work__img, .contact__input',{interval: 200}); 
+
+let linkedin=document.querySelector(".linkedin-icon");
+
+linkedin.addEventListener("click",(e)=>{
+    e.preventDefault();
+    location.href='https://www.linkedin.com/in/mohd-ashraf-659279254/'
+})
+
+let gitHub=document.querySelector(".github");
+
+gitHub.addEventListener("click",(e)=>{
+  e.preventDefault();
+  location.href='https://github.com/ashraf79123';
+})
+let instagram=document.querySelector(".instagram");
+
+instagram.addEventListener("click",(e)=>{
+  e.preventDefault();
+  location.href='https://www.instagram.com/_assu__08__/';
+})
+
+//  buuton click code
+
+
+document.getElementById("contactForm").addEventListener("submit", function(e) {
+  e.preventDefault(); // prevent default form submit behavior
+
+  // OPTIONAL: send data to backend (skip if not using now)
+  const formData = new FormData(this);
+  const data = {
+    name: formData.get("name"),
+    email: formData.get("email"),
+    message: formData.get("message")
+  };
+
+  // Show thank-you popup
+  alert("Thank you for contacting us!");
+
+  // Optional: Reset form
+  this.reset();
+
+  // OPTIONAL: Send data to backend via fetch
+  /*
+  fetch("/submit", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify(data)
+  }).then(response => {
+    if (response.ok) {
+      alert("Thank you for contacting us!");
+      this.reset();
+    }
+  });
+  */
+});
+

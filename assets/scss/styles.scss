@@ -214,10 +214,11 @@ img{
         position: absolute;
         right: 0;
         bottom: 0;
-        width: 260px;
+        width: 180px;
     }
     &__blob{
         fill: var(--first-color);
+        width: 200px; /
 
         &-img{
             width: 360px;
